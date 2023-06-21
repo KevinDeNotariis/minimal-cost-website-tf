@@ -1,0 +1,15 @@
+variable "identifier" {}
+variable "suffix" {}
+variable "root_domain_name" {}
+variable "website_domain" {}
+variable "cloudfront_allowed_methods" {}
+variable "bucket_allowed_methods" {}
+variable "source_provider" {}
+variable "source_repo_id" {}
+variable "source_branch_name" {}
+variable "logs_retention" {}
+variable "build_timeout" {}
+variable "build_queue_timeout" {}
+variable "build_image_type" {}
+variable "build_image" {}
+variable "sns_email_subscriptions" {}
