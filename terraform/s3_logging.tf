@@ -19,7 +19,7 @@ resource "aws_s3_bucket_acl" "logging" {
   acl    = "log-delivery-write"
 
   depends_on = [
-    aws_s3_bucket_ownership_controls.logging
+    aws_s3_bucket_ownership_controls.logging,
   ]
 }
 

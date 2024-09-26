@@ -37,20 +37,9 @@ resource "aws_s3_bucket_logging" "website" {
   ]
 }
 
-resource "aws_s3_bucket_ownership_controls" "website" {
-  bucket = aws_s3_bucket.website.id
-  rule {
-    object_ownership = "BucketOwnerEnforced"
-  }
-}
-
 resource "aws_s3_bucket_acl" "website" {
   bucket = aws_s3_bucket.website.id
   acl    = "private"
-
-  depends_on = [
-    aws_s3_bucket_ownership_controls.website
-  ]
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
